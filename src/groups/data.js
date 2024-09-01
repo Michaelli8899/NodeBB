@@ -88,12 +88,11 @@ function coverUrl(group, url){
 function modifyGroup(group, fields) {
 	if (group) {
 		db.parseIntFields(group, intFields, fields);
-
 		escapeGroupData(group);
-		setDefaultValues(group);
-		
 
-		
+		console.log("MICHAEL LI");
+		setDefaultValues(group);
+
 		coverUrl(group, 'cover:url');
 		coverUrl(group, 'cover:thumb:url');
 
