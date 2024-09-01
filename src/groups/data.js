@@ -65,7 +65,7 @@ module.exports = function (Groups) {
 	};
 };
 
-function setDefaultValues(group){
+function setDefaultValues(group) {
 	group.userTitleEnabled = ([null, undefined].includes(group.userTitleEnabled)) ? 1 : group.userTitleEnabled;
 	group.labelColor = validator.escape(String(group.labelColor || '#000000'));
 	group.textColor = validator.escape(String(group.textColor || '#ffffff'));
@@ -90,7 +90,7 @@ function modifyGroup(group, fields) {
 		db.parseIntFields(group, intFields, fields);
 		escapeGroupData(group);
 
-		console.log("MICHAEL LI");
+		console.log('MICHAEL LI');
 		setDefaultValues(group);
 
 		coverUrl(group, 'cover:url');
