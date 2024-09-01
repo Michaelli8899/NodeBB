@@ -77,7 +77,7 @@ function setDefaultValues(group) {
 	group['cover:thumb:url'] = group['cover:thumb:url'] || group['cover:url'];
 }
 
-function coverUrl(group, url){
+function coverUrl(group, url) {
 	if (group[url]) {
 		group[url] = group[url].startsWith('http') ? group[url] : (nconf.get('relative_path') + group[url]);
 	} else {
